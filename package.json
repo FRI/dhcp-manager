@@ -2,7 +2,7 @@
   "name": "kea-manager",
   "version": "1.0.0",
   "description": "ISC Kea Manager with AD integration for RBAC",
-  "main": "bin/www.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +26,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "jquery": "^3.5.1",
+    "node-sass-middleware": "^0.11.0",
     "popper.js": "^1.16.1",
     "pug": "^3.0.0"
   }
