@@ -1,0 +1,32 @@
+{
+  "name": "kea-manager",
+  "version": "1.0.0",
+  "description": "ISC Kea Manager with AD integration for RBAC",
+  "main": "bin/www.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fri/kea-manager.git"
+  },
+  "keywords": [
+    "isc-kea",
+    "kea",
+    "active-directory"
+  ],
+  "author": "Anze Jensterle <anze@anze.dev>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/fri/kea-manager/issues"
+  },
+  "homepage": "https://github.com/fri/kea-manager#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "pug": "^3.0.0"
+  }
+}

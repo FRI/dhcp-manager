@@ -1,0 +1,14 @@
+extends ../top
+
+mixin nav(href, text)
+    li.nav-item: a(href=href, class=(href==url ? 'nav-link active' : 'nav-link')) #{text}
+
+block contents
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+        a.navbar-brand(href='#') FRI DHCP
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#mainNavbar', aria-controls='mainNavbar', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #mainNavbar.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+                +nav('/app', 'Domov')
+    block content
