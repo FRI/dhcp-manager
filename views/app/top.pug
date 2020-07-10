@@ -5,10 +5,18 @@ mixin nav(href, text)
 
 block contents
     nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
-        a.navbar-brand(href='#') FRI DHCP
+        a.navbar-brand(href='/app') FRI DHCP
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#mainNavbar', aria-controls='mainNavbar', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
         #mainNavbar.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
-                +nav('/app', 'Domov')
-    block content
+                +nav('/app/networks', 'Omrežja')
+            ul.navbar-nav.mt-2.mt-lg-0
+                li.navbar-text.text-light #{user.displayName}
+                +nav('/logout', 'Odjava')
+    .container
+        if flash.error
+            .alert.w-100.alert-danger=flash.error
+        if flash.success
+            .alert.w-100.alert-success=flash.success
+        block content

@@ -1,0 +1,17 @@
+{
+    "ldap": {
+        "url": "ldap://ad.example.com:3268",
+        "bindDN": "user@example.com",
+        "bindCredentials": "password",
+        "searchBase": "dc=example,dc=com",
+        "searchScope": "sub",
+        "searchFilter": "(&(objectClass=person)(|(sAMAccountName={{username}})(userPrincipalName={{username}})))"
+    },
+    "dhcp": "https://test:test@example.com",
+    "permissions": {
+        "CN=Admin,DC=example,dc=dom": ["192.168.99.0/24"]
+    },
+    "networks": {
+        "192.168.99.0/24": "TestNet1"
+    }
+}

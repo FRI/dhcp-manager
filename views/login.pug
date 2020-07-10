@@ -8,10 +8,12 @@ block contents
                     img.img-fluid.d-none.d-sm-block(alt='Logo' src='/assets/logo.png')
                     h3.modal-title.text-center.col-12 DHCP Manager
             .modal-body: form(action='/login', method='POST')
+                if flash.error
+                    .alert.alert-danger.w-100=flash.error
                 .form-group
-                    input.form-control(type='text' placeholder='Uporabniško ime')
+                    input.form-control(type='text' name='username' placeholder='Uporabniško ime')
                 .form-group
-                    input.form-control(type='password' placeholder='Geslo')
+                    input.form-control(type='password' name='password' placeholder='Geslo')
                 button.btn.btn-primary.btn-block(type='submit') Prijava
     style.
         body {
